@@ -1,0 +1,1 @@
+python train.py --batch 128 --iou-thres 0.5 --cfg yolov5s.yaml --weights yolov5s.pt --data ip102.yaml --img 640 --epochs 300
