@@ -49,6 +49,7 @@ from models.common import (
     GhostConv,
     Proto,
 )
+from models.fast_feature_enhance1 import FeatureEnhanceModule
 from models.experimental import MixConv2d
 from utils.autoanchor import check_anchor_order
 from utils.general import LOGGER, check_version, check_yaml, colorstr, make_divisible, print_args
@@ -420,6 +421,7 @@ def parse_model(d, ch):
             nn.ConvTranspose2d,
             DWConvTranspose2d,
             C3x,
+            FeatureEnhanceModule,
         }:
             c1, c2 = ch[f], args[0]
             if c2 != no:  # if not output
